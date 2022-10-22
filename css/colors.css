@@ -20,6 +20,10 @@
     td {
         border-color: #777777;
     }
+
+    .footnotes {
+        color:#777777;
+    }
 }
 
 @media (prefers-color-scheme: light) {
@@ -47,5 +51,9 @@
 
     .separator {
         border-color:#1b1b1b;
+    }
+
+    .footnotes {
+        color:#777777
     }
 }
