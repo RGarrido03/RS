@@ -19,12 +19,23 @@
   <h2>Virtual PCs (GNS3)</h2>
   <table>
     <tr>
+      <th></th>
       <th>Ação</td>
       <th>Comando</td>
     </tr>
     <tr>
+      <th>Geral</th>
+      <td class="separator">Guardar configuração</td>
+      <td class="separator"><code>save</code></td>
+    </tr>
+    <tr>
+      <th rowspan="5">IP</th>
       <td>Mostrar IP</td>
       <td><code>show ip</code></td>
+    </tr>
+    <tr>
+      <td>Apagar IP configurado</i></td>
+      <td><code>clear ip</code></td>
     </tr>
     <tr>
       <td>Configurar IP, sem <i>default gateway</i></td>
@@ -35,12 +46,22 @@
       <td><code>ip &lt;ip_address&gt; &lt;mask&gt; &lt;default_gateway&gt;</code></td>
     </tr>
     <tr>
-      <td>Configurar <i>default gateway</i></td>
-      <td><code>ip default-gateway &lt;address&gt;</code></td>
+      <td class="separator">Configurar <i>default gateway</i></td>
+      <td class="separator"><code>ip default-gateway &lt;address&gt;</code></td>
     </tr>
     <tr>
-      <td class="end">Guardar configuração</td>
-      <td class="end"><code>save</code></td>
+      <th rowspan="2">ARP</th>
+      <td>Mostrar tabela de encaminhamento</td>
+      <td><code>show arp</code></td>
+    </tr>
+    <tr>
+      <td class="separator">Apagar tabela de encaminhamento</td>
+      <td class="separator"><code>clear arp</code></td>
+    </tr>
+    <tr>
+      <td class="end"><b>Outros</b></td>
+      <td class="end">Fazer <i>ping</i> para outro dispositivo</td>
+      <td class="end"><code>ping &lt;ip_address&gt;</code></td>
     </tr>
   </table>
   <br>
