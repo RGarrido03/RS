@@ -29,3 +29,11 @@ th {
 .end {
     border-bottom: 0;
 }
+
+a {
+    margin-right: 0.5rem;
+}
+
+[class^="fab "] {
+    font-size: 1.25rem;
+}

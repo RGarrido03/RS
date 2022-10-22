@@ -24,6 +24,10 @@
     .footnotes {
         color:#777777;
     }
+
+    [class^="fab "] {
+        color: white;
+    }
 }
 
 @media (prefers-color-scheme: light) {
@@ -41,19 +45,15 @@
         box-shadow: 0px 0px 1rem rgb(230, 230, 230);
     }
 
-    th {
-        border-color: #1b1b1b;
-    }
-
     td {
         border-color: #D1D1D1;
     }
 
-    .separator {
-        border-color:#1b1b1b;
-    }
-
     .footnotes {
         color:#777777
+    }
+
+    [class^="fab "] {
+        color: #1b1b1b;
     }
 }
