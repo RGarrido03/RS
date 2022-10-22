@@ -1,0 +1,31 @@
+body {
+    font-family: 'Noto Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:3rem;
+}
+
+table {
+    width: 100%;
+    border: 0px solid;
+    border-spacing: 0px;
+    border-radius: 1rem;
+    padding:0.25rem 1rem;
+}
+
+td {
+    border-bottom: 1px solid;
+    padding:0.5rem 0.5rem 0.5rem 1rem;
+}
+
+th {
+    text-align: left;
+    padding:0.5rem 0.5rem 0.5rem 1rem;
+    border-bottom: 1px solid;
+}
+
+.separator {
+    border-bottom: 1px solid
+}
+
+.end {
+    border-bottom: 0;
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <title>Comandos GNS3/CISCO</title>
+  <meta charset="UTF-8">
+  <meta name="Author" content="Rúben Garrido">
+  <meta name="Description" content="CISCO">
+  <link href="design.css" rel="stylesheet">
+  <link href="colors.css" rel="stylesheet">
+  <link href="responsive.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body id="body">
+  <h1>Resumo de comandos para GNS3 e dispositivos CISCO</h1>
+
+  <h2>Virtual PCs (GNS3)</h2>
+  <table>
+    <tr>
+      <th>Ação</td>
+      <th>Comando</td>
+    </tr>
+    <tr>
+      <td>Mostrar IP</td>
+      <td><code>show ip</code></td>
+    </tr>
+    <tr>
+      <td>Configurar IP, sem <i>default gateway</i></td>
+      <td><code>ip &lt;ip_address&gt; &lt;mask&gt;</code></td>
+    </tr>
+    <tr>
+      <td>Configurar IP, com <i>default gateway</i></td>
+      <td><code>ip &lt;ip_address&gt; &lt;mask&gt; &lt;default_gateway&gt;</code></td>
+    </tr>
+    <tr>
+      <td>Configurar <i>default gateway</i></td>
+      <td><code>ip default-gateway &lt;address&gt;</code></td>
+    </tr>
+    <tr>
+      <td class="end">Guardar configuração</td>
+      <td class="end"><code>save</code></td>
+    </tr>
+  </table>
+  <br>
+
+  <h2>Switch L3 e router CISCO</h2>
+  <table>
+    <!-- Heading -->
+    <tr>
+      <th></th>
+      <th>Ação</td>
+      <th>Comando</td>
+    </tr>
+
+    <!-- Geral -->
+    <tr>
+      <th rowspan="3">Geral</th>
+      <td>Mostrar configuração</td>
+      <td><code>show run</code></td>
+    </tr>
+    <tr>
+      <td>Guardar configuração</td>
+      <td><code>write</code></td>
+    </tr>
+    <tr>
+      <td class="separator">Entrar nas configurações</td>
+      <td class="separator"><code>configure terminal</code></td>
+    </tr>
+
+    <!-- Portas -->
+    <tr>
+      <th rowspan="8">Portas</th>
+      <td>Mostrar portas conectadas</td>
+      <td><code>show ip interface brief</code></td>
+    </tr>
+    <tr>
+      <td>Selecionar porta para configuração</td>
+      <td><code>interface f&lt;P&gt;/&lt;port&gt;</code></td>
+    </tr>
+    <tr>
+      <td>Selecionar várias portas para configuração</td>
+      <td><code>interface range f&lt;P&gt;/&lt;port1&gt; - &lt;port2&gt;</code></td>
+    </tr>
+    <tr>
+      <td>Configurar IP</td>
+      <td><code>ip &lt;ip_address&gt; &lt;mask&gt;</code></td>
+    </tr>
+    <tr>
+      <td>Ativar portas</td>
+      <td><code>no shutdown</code></td>
+    </tr>
+    <tr>
+      <td>Desativar portas</td>
+      <td><code>shutdown</code></td>
+    </tr>
+    <tr>
+      <td>Desativar gestão automática</td>
+      <td><code>no autostate</code></td>
+    </tr>
+    <tr>
+      <td class="separator">Escolher porta como trunk / interswitch</td>
+      <td class="separator">
+        <code>
+          switchport mode trunk<br>
+          switchport trunk encapsulation dot1q
+        </code>
+      </td>
+    </tr>
+
+    <!-- VLANs -->
+    <tr>
+      <th rowspan="4">VLANs</th>
+      <td>Mostrar VLANs</td>
+      <td><code>show vlan-switch</code></td>
+    </tr>
+    <tr>
+      <td>Selecionar VLAN para configuração</td>
+      <td><code>interface vlan &lt;number&gt;</code></td>
+    </tr>
+    <tr>
+      <td>Associar portas a uma VLAN</td>
+      <td>
+        <code>
+        switchport mode access<br>
+        switchport access vlan &lt;number&gt;
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <td class="separator">Ativar VLAN</td>
+      <td class="separator">
+        <code>
+        vlan database<br>
+        vlan &lt;number&gt;<br>
+        apply<br>
+        exit
+        </code>
+      </td>
+    </tr>
+
+    <!-- Routing -->
+    <tr>
+      <th rowspan="2"><b>Router</b></th>
+      <td>Ativar funcionalidades de router</td>
+      <td><code>ip routing</code></td>
+    </tr>
+    <tr>
+      <td class="separator">Consultar tabela de <i>IP routing</i></td>
+      <td class="separator"><code>show ip route</code></td>
+    </tr>
+
+    <!-- Switching -->
+    <tr>
+      <td rowspan="2" class="end"><b>Switch</b>¹</td>
+      <td>Consultar tabela de <i>forwarding</i></td>
+      <td><code>show mac-address-table</code></td>
+    </tr>
+    <tr>
+      <td class="end">Alterar tempo de vida dos endereços MAC</td>
+      <td class="end"><code>mac-address-table aging-time &lt;seconds&gt;</code></td>
+    </tr>
+  </table>
+  <br>
+
+  <h2>Notas</h2>
+  <p class="footnotes">¹ Comandos não disponíveis no router, por não possuir suporte à camada de nível 2.</p>
+</body>
+</html>
