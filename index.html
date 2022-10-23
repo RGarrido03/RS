@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <title>Comandos RS</title>
+  <!-- General information -->
+  <title>Comandos de RS</title>
   <meta charset="UTF-8">
   <meta name="Author" content="Rúben Garrido">
   <meta name="Description" content="Lista de comandos para o GNS3 e para dispositivos CISCO">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F2F3F5"/>
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black"/>
+  
+  <!-- PWA -->
   <link rel="canonical" href="https://rgarrido03.github.io/RS/" />
+  <link rel="manifest" href="manifest.json">
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('pwabuilder-sw.js')
+    }
+  </script>
+  
+  <!-- Icon -->
+  <link rel="mask-icon" href="/icon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/icon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
+  
+  <!-- CSS -->
   <link href="css/design.css" rel="stylesheet">
   <link href="css/colors.css" rel="stylesheet">
   <link href="css/responsive.css" rel="stylesheet">
@@ -16,18 +34,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="manifest" href="manifest.json">
+  
+  <!-- Banner-related needed features -->
   <script type="application/javascript" src="js/banner.js" ></script>
   <script type="application/javascript" src="https://unpkg.com/react@16.0.0/umd/react.production.min.js" ></script>
   <script type="application/javascript" src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js" ></script>
   <script type="application/javascript" src="https://unpkg.com/@babel/standalone/babel.min.js" ></script>
   <script type="application/javascript" src="https://unpkg.com/whatwg-fetch@3.0.0/dist/fetch.umd.js"></script>
-  <script>
-    if (typeof navigator.serviceWorker !== 'undefined') {
-      navigator.serviceWorker.register('pwabuilder-sw.js')
-    }
-  </script>
 </head>
+
 <body>
   <div class="header">
     <h1>Comandos para GNS3 e CISCO</h1>
