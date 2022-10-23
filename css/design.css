@@ -35,7 +35,7 @@ a {
     margin-right: 0.5rem;
 }
 
-[class^="fab "] {
+[class^="fab "],[class^="fas "] {
     font-size: 1.25rem;
 }
 

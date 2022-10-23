@@ -13,9 +13,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script
+    type="application/javascript"
+    src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"
+  ></script>
+  <script
+    type="application/javascript"
+    src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"
+  ></script>
+  <script
+    type="application/javascript"
+    src="https://unpkg.com/@babel/standalone/babel.min.js"
+  ></script>
+  <script
+    type="application/javascript"
+    src="https://unpkg.com/whatwg-fetch@3.0.0/dist/fetch.umd.js"
+  ></script>
 </head>
 <body>
-  <h1>Comandos para GNS3 e CISCO</h1>
+  <div class="header">
+    <h1>Comandos para GNS3 e CISCO</h1>
+    <div id="info">
+      <i class="fas fa-circle-info"></i>
+    </div>
+  </div>
 
   <h2>Virtual PCs (GNS3)</h2>
   <div class="table-div">
@@ -200,5 +221,8 @@
       <a href="https://github.com/RGarrido03"><i class="fab fa-github"></i></a>
     </p>
   </div>
+
+  <div id="commit"></div>
+  <script type="text/jsx" src="js/github.jsx"></script>
 </body>
 </html>
