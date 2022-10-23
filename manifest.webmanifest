@@ -5,9 +5,9 @@
   "display": "standalone",
   "name": "Comandos para RS",
   "orientation": "any",
-  "scope": "",
+  "scope": "https://rgarrido03.github.io/RS/",
   "short_name": "Comandos RS",
-  "start_url": "",
+  "start_url": "https://rgarrido03.github.io/RS/",
   "theme_color": "#F2F3F5",
   "categories": [
     "education",
