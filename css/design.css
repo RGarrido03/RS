@@ -49,7 +49,7 @@ a {
     margin-right: 0.5rem;
 }
 
-[class^="fab "],[class^="fas "] {
+.fab,.fas {
     font-size: 1.25rem;
 }
 

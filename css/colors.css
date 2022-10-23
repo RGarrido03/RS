@@ -25,11 +25,11 @@
         color:#777777;
     }
 
-    [class^="fab "],[class^="fas "] {
+    .fab,.fas {
         color: white;
     }
 
-    [class^="fab "]:hover,[class^="fas "]:hover {
+    .fab:hover,.fas:hover {
         color: #bbbbbb;
     }
 }
@@ -57,11 +57,11 @@
         color:#777777
     }
 
-    [class^="fab "],[class^="fas "] {
+    .fab,.fas {
         color: #1b1b1b;
     }
 
-    [class^="fab "]:hover,[class^="fas "]:hover {
+    .fab:hover,.fas:hover {
         color: #777777;
     }
 }
