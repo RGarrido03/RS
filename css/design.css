@@ -8,7 +8,7 @@ h1 {
     width:90%;
 }
 
-#info {
+.info {
     float:right;
     line-height:3rem;
     vertical-align: middle;
