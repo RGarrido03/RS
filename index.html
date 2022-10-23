@@ -40,6 +40,7 @@
   
   <!-- Banner-related needed features -->
   <script type="application/javascript" src="js/banner.js" ></script>
+  <script type="application/javascript" src="js/offline.js" ></script>
   <script type="application/javascript" src="https://unpkg.com/react@16.0.0/umd/react.production.min.js" ></script>
   <script type="application/javascript" src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js" ></script>
   <script type="application/javascript" src="https://unpkg.com/@babel/standalone/babel.min.js" ></script>
@@ -48,6 +49,10 @@
 
 <body>
   <div class="header">
+    <div class="error-banner" id="error-banner">
+      <p><b>Sem ligação à Internet</b><br>
+        A página poderá estar desatualizada.</p>
+    </div>
     <h1>Comandos para GNS3 e CISCO</h1>
     <div class="info">
       <i class="fas fa-circle-info" id="icon" onclick="banner()"></i>
@@ -56,7 +61,6 @@
         <script type="text/jsx" src="js/github.jsx"></script>
       </div>
     </div>
-    
   </div>
 
   <h2>Virtual PCs (GNS3)</h2>

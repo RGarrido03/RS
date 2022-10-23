@@ -36,6 +36,10 @@
     .info-banner {
         background-color: #1b1b1b;
     }
+
+    .error-banner {
+        background-color:darkred;
+    }
 }
 
 @media (prefers-color-scheme: light) {
@@ -71,6 +75,11 @@
 
     .info-banner {
         background-color: white;
+        box-shadow: 0px 0px 1rem rgb(230, 230, 230);
+    }
+
+    .error-banner {
+        background-color:lightcoral;
         box-shadow: 0px 0px 1rem rgb(230, 230, 230);
     }
 }
