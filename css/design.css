@@ -53,3 +53,11 @@ a {
 [class^="fab "] {
     font-size: 1.25rem;
 }
+
+.width-first {
+    width: 11%;
+}
+
+.width-middle {
+    width: 46%;
+}
