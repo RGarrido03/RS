@@ -5,9 +5,9 @@
   "display": "standalone",
   "name": "Comandos para RS",
   "orientation": "any",
-  "scope": "/RS",
+  "scope": "",
   "short_name": "Comandos RS",
-  "start_url": "/RS",
+  "start_url": "",
   "theme_color": "#F2F3F5",
   "categories": [
     "education",
