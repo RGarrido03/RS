@@ -5,7 +5,7 @@
         color: white;
     }
 
-    table {
+    .table-div {
         background-color: #1b1b1b;
     }
 
@@ -40,7 +40,7 @@
         color:#AD2F2F;
     }
 
-    table {
+    .table-div {
         background-color: white;
         box-shadow: 0px 0px 1rem rgb(230, 230, 230);
     }
