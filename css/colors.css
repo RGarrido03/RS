@@ -25,8 +25,12 @@
         color:#777777;
     }
 
-    [class^="fab "] {
+    [class^="fab "],[class^="fas "] {
         color: white;
+    }
+
+    [class^="fab "]:hover,[class^="fas "]:hover {
+        color: #bbbbbb;
     }
 }
 
@@ -53,7 +57,11 @@
         color:#777777
     }
 
-    [class^="fab "] {
+    [class^="fab "],[class^="fas "] {
         color: #1b1b1b;
+    }
+
+    [class^="fab "]:hover,[class^="fas "]:hover {
+        color: #777777;
     }
 }
