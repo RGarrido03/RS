@@ -2,7 +2,7 @@
   "background_color": "#ffffff",
   "description": "Lista de comandos para o GNS3 e para dispositivos CISCO, no âmbito de Redes e Serviços.",
   "dir": "ltr",
-  "display": "browser",
+  "display": "standalone",
   "name": "Comandos para RS",
   "orientation": "any",
   "scope": "/RS",
