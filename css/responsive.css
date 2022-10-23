@@ -6,17 +6,29 @@
     td,th {
         padding:0.5rem 0.5rem;
     }
+
+    .info-banner {
+        right:1rem;
+    }
 }
 
 @media screen and (min-width:576px) and (max-width:992px) {
     body {
         margin:2rem 3rem;
     }
+
+    .info-banner {
+        right:3rem;
+    }
 }
 
 @media screen and (min-width:992px) {
     body {
         margin:2rem 20%;
+    }
+
+    .info-banner {
+        right:20%;
     }
 }
 

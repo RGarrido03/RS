@@ -11,7 +11,15 @@ h1 {
 .info {
     float:right;
     line-height:3rem;
-    vertical-align: middle;
+}
+
+.info-banner {
+    display:none;
+    position: absolute;
+    padding:1rem;
+    border-radius: 0.5rem;
+    z-index: 1;
+    line-height: 2rem;
 }
 
 .header {

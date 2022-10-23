@@ -45,7 +45,7 @@ class LatestCommitComponent extends React.Component {
       const html = this.state.error ? (
         <div id="error">{this.state.error}</div>
       ) : (
-        <div id="date">Last commit: {this.state.date}</div>
+        <div id="date"><b>Last commit:</b> {this.state.date}</div>
       );
   
       return <div>{html}</div>;
