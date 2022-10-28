@@ -225,13 +225,36 @@
 
       <!-- Switching -->
       <tr>
-        <td rowspan="2" class="end"><b>Switch</b>¹</td>
+        <th rowspan="2"><b>Switch</b>¹</th>
         <td>Consultar tabela de <i>forwarding</i></td>
         <td><code>show mac-address-table</code></td>
       </tr>
       <tr>
-        <td class="end">Alterar tempo de vida dos endereços MAC</td>
-        <td class="end"><code>mac-address-table aging-time &lt;seconds&gt;</code></td>
+        <td class="separator">Alterar tempo de vida dos endereços MAC</td>
+        <td class="separator"><code>mac-address-table aging-time &lt;seconds&gt;</code></td>
+      </tr>
+
+      <!-- Spanning tree -->
+      <tr>
+        <td rowspan="5" class="end"><b><i>Spanning tree</i></b>¹</td>
+        <td>Mostrar <i>spanning tree</i> atual</td>
+        <td><code>show spanning-tree</code></td>
+      </tr>
+      <tr>
+        <td>Mostrar <i>spanning tree</i> atual, para certa VLAN</td>
+        <td><code>show spanning-tree vlan &lt;number&gt;</code></td>
+      </tr>
+      <tr>
+        <td>Definir prioridade de uma <i>bridge</i></td>
+        <td><code>spanning-tree vlan &lt;number&gt; priority &lt;value&gt;</code></td>
+      </tr>
+      <tr>
+        <td>Definir custo da porta raiz (escolher porta primeiro)</td>
+        <td><code>spanning-tree cost &lt;value&gt;</code></td>
+      </tr>
+      <tr>
+        <td class="end">Definir <i>Hello Time</i>, para certa VLAN</td>
+        <td class="end"><code>spanning-tree vlan &lt;number&gt; hello-time &lt;value&gt;</code></td>
       </tr>
     </table>
   </div>
