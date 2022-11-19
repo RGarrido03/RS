@@ -181,6 +181,129 @@
         </td>
       </tr>
 
+      <!-- IPv6 -->
+      <tr>
+        <th rowspan="5">IPv6</th>
+        <td>Ativar IPv6 Unicast Routing</td>
+        <td><code>ipv6 unicast-routing</code></td>
+      </tr>
+      <tr>
+        <td>Ativar IPv6 numa porta</td>
+        <td><code>ipv6 enable</code></td>
+      </tr>
+      <tr>
+        <td>Mostrar configuração IPv6</td>
+        <td><code>show ipv6 interface brief</code></td>
+      </tr>
+      <tr>
+        <td>Configurar IP</td>
+        <td><code>ipv6 &lt;ip_address&gt;&lt;mask&gt;</code></td>
+      </tr>
+      <tr>
+        <td class="separator">Configurar IP baseado em EUI-64</td>
+        <td class="separator"><code>ipv6 &lt;ip_address&gt;&lt;mask&gt; eui-64</code></td>
+      </tr>
+
+      <!-- Rotas estáticas -->
+      <tr>
+        <th rowspan="3">Rotas estáticas</th>
+        <td>IPv4</td>
+        <td>
+          <code>ip route &lt;net-id&gt; &lt;net-mask&gt; &lt;next-hop&gt;</code>
+          <p style="margin-bottom:0;">Default: <code>0.0.0.0/0</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td>IPv6</td>
+        <td>
+          <code>ipv6 route &lt;net-id/net-mask&gt; &lt;next-hop&gt;</code>
+          <p style="margin-bottom:0;">Default: <code>::/0</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="separator">Ver rotas configuradas</td>
+        <td class="separator"><code>show ip route</code></td>
+      </tr>
+
+      <!-- RIP -->
+      <tr>
+        <th rowspan="6">RIP</th>
+        <td>Abrir configuração RIP</td>
+        <td><code>router rip</code></td>
+      </tr>
+      <tr>
+        <td>Ativar RIPng numa porta</td>
+        <td><code>ipv6 rip 1 enable</code></td>
+      </tr>
+      <tr>
+        <td>Definir redes diretamente ligadas</td>
+        <td><code>network &lt;id&gt;</code></td>
+      </tr>
+      <tr>
+        <td>Ver rotas configuradas</td>
+        <td><code>show ip[v6] route</code></td>
+      </tr>
+      <tr>
+        <td>Ligar split-horizon</td>
+        <td><code>ip split-horizon</code></td>
+      </tr>
+      <tr>
+        <td class="separator">Definir rota por omissão</td>
+        <td class="separator">
+          IPv4: <code>default-information originate</code><br>
+          IPv6: <code>ipv6 rip 1 default-information originate</code>
+        </td>
+      </tr>
+
+      <!-- OSPF -->
+      <tr>
+        <th rowspan="9">OSPF</th>
+        <td>Abrir configuração OSPF</td>
+        <td><code>[ipv6] router ospf &lt;id&gt;</code></td>
+      </tr>
+      <tr>
+        <td>Definir redes diretamente ligadas</td>
+        <td><code>network &lt;id&gt; area &lt;id&gt;</code></td>
+      </tr>
+      <tr>
+        <td>Definir interface conectada</td>
+        <td><code>default-information originate</code></td>
+      </tr>
+      <tr>
+        <td>Definir ID do router (OSPFv3)</td>
+        <td><code>router-id &lt;n.n.n.n&gt;</code></td>
+      </tr>
+      <tr>
+        <td>Ver rotas configuradas</td>
+        <td><code>show ip[v6] route</code></td>
+      </tr>
+      <tr>
+        <td>Ver custos</td>
+        <td><code>show ip ospf interface</code></td>
+      </tr>
+      <tr>
+        <td>Ver informações</td>
+        <td>
+          &#8226; <code>show ip[v6] ospf [ipv6-id] database</code><br>
+          &#8226; <code>show ip[v6] ospf [ipv6-id] database network</code><br>
+          &#8226; <code>show ip[v6] ospf [ipv6-id] database router</code><br>
+          &#8226; <code>show ip[v6] ospf [ipv6-id] database summary</code><br>
+          &#8226; <code>show ipv6 ospf &lt;ipv6-id&gt; database prefix</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Definir custo da interface</td>
+        <td><code>ip ospf cost &lt;value&gt;</code></td>
+      </tr>
+      <tr>
+        <td class="separator">Definir rota por omissão</td>
+        <td class="separator">
+          IPv4: <code>default-information originate</code><br>
+          IPv6: <code>default-information originate always</code>
+        </td>
+      </tr>
+
+
       <!-- VLANs -->
       <tr>
         <th rowspan="4">VLANs</th>
