@@ -181,6 +181,48 @@
         </td>
       </tr>
 
+      <!-- VLANs -->
+      <tr>
+        <th rowspan="4">VLANs</th>
+        <td>Mostrar VLANs</td>
+        <td><code>show vlan-switch</code></td>
+      </tr>
+      <tr>
+        <td>Selecionar VLAN para configuração</td>
+        <td><code>interface vlan &lt;number&gt;</code></td>
+      </tr>
+      <tr>
+        <td>Associar portas a uma VLAN</td>
+        <td>
+          <code>
+          switchport mode access<br>
+          switchport access vlan &lt;number&gt;
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td class="separator">Ativar VLAN</td>
+        <td class="separator">
+          <code>
+          vlan database<br>
+          vlan &lt;number&gt;<br>
+          apply<br>
+          exit
+          </code>
+        </td>
+      </tr>
+
+      <!-- IPv4 -->
+      <tr>
+        <th rowspan="2">IPv4</th>
+        <td>Mostrar configuração</td>
+        <td><code>show ip interface brief</code></td>
+      </tr>
+      <tr>
+        <td class="separator">Configurar IP</td>
+        <td class="separator"><code>ip &lt;ip_address&gt; &lt;mask&gt;</code></td>
+      </tr>
+
       <!-- IPv6 -->
       <tr>
         <th rowspan="5">IPv6</th>
@@ -192,7 +234,7 @@
         <td><code>ipv6 enable</code></td>
       </tr>
       <tr>
-        <td>Mostrar configuração IPv6</td>
+        <td>Mostrar configuração</td>
         <td><code>show ipv6 interface brief</code></td>
       </tr>
       <tr>
@@ -303,36 +345,30 @@
         </td>
       </tr>
 
-
-      <!-- VLANs -->
+      <!-- BGP -->
       <tr>
-        <th rowspan="4">VLANs</th>
-        <td>Mostrar VLANs</td>
-        <td><code>show vlan-switch</code></td>
+        <th rowspan="6">BGP</th>
+        <td>Abrir configuração BGP</td>
+        <td><code>router bgp &lt;id&gt;</code></td>
       </tr>
       <tr>
-        <td>Selecionar VLAN para configuração</td>
-        <td><code>interface vlan &lt;number&gt;</code></td>
+        <td>Definir redes diretamente ligadas</td>
+        <td><code>network &lt;ip&gt;</code></td>
       </tr>
       <tr>
-        <td>Associar portas a uma VLAN</td>
-        <td>
-          <code>
-          switchport mode access<br>
-          switchport access vlan &lt;number&gt;
-          </code>
-        </td>
+        <td>Definir vizinhos</td>
+        <td><code>neighbor &lt;ip&gt; remote-as &lt;id&gt;</code></td>
       </tr>
       <tr>
-        <td class="separator">Ativar VLAN</td>
-        <td class="separator">
-          <code>
-          vlan database<br>
-          vlan &lt;number&gt;<br>
-          apply<br>
-          exit
-          </code>
-        </td>
+        <td>Redistribuir OSPF</td>
+        <td><code>redistribute ospf &lt;id&gt;</code></td>
+      </tr>
+      <tr>
+        <td>Agregar IPs</td>
+        <td><code>aggregate-address &lt;ip&gt; &lt;mask&gt; summary-only</code></td>
+      </tr>
+      <tr>
+        <td class="separator" colspan="2"><b>Nota</b>: Quando há IPv6, adicionar <code>address-family ipv&lt;v&gt;</code> antes de qualquer comando.</td>
       </tr>
 
       <!-- Routing -->
