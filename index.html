@@ -371,6 +371,66 @@
         <td class="separator" colspan="2"><b>Nota</b>: Quando há IPv6, adicionar <code>address-family ipv&lt;v&gt;</code> antes de qualquer comando.</td>
       </tr>
 
+      <!-- NAT -->
+      <tr>
+        <th rowspan="12">NAT</th>
+        <td>Definir endereços da pool</td>
+        <td><code>ip nat pool &lt;name&gt; &lt;start-ip&gt; &lt;end-ip&gt; netmask &lt;mask&gt;</code></td>
+      </tr>
+      <tr>
+        <td>Definir lista de acesso standard</td>
+        <td><code>access-list &lt;id&gt; permit &lt;ip&gt; &lt;inverted-mask&gt;</code></td>
+      </tr>
+      <tr>
+        <td>Associar lista de acesso a uma pool</td>
+        <td><code>ip nat inside source list &lt;id&gt; pool &lt;name&gt;</code></td>
+      </tr>
+      <tr>
+        <td>Associar porta interna da NAT</td>
+        <td><code>ip nat inside</code></td>
+      </tr>
+      <tr>
+        <td>Associar porta externa da NAT</td>
+        <td><code>ip nat outside</code></td>
+      </tr>
+      <tr>
+        <td>Mostrar traduções</td>
+        <td><code>show ip nat translations</code></td>
+      </tr>
+      <tr>
+        <td>Mostrar estatísticas</td>
+        <td><code>show ip nat statistics</code></td>
+      </tr>
+      <tr>
+        <td>Limpar tabela de encaminhamento</td>
+        <td><code>clear ip nat translation *</code></td>
+      </tr>
+      <tr>
+        <td>Bloquear tráfego de certos IPs</td>
+        <td>
+          <code>ip access-list extended notPrivate</code><br>
+          <code>deny ip &lt;ip&gt; &lt;inverted-mask&gt; any</code><br>
+          <code>permit ip any any</code><br>
+          <code>interface &lt;port&gt;</code><br>
+          <code>ip access-group notPrivate out</code>
+        </td>
+      </tr>
+      <tr>
+        <td>Change NAT timeout</td>
+        <td>
+          <code>ip nat translation timeout &lt;seconds&gt;</code><br>
+          Default: 86400 seconds
+        </td>
+      </tr>
+      <tr>
+        <td>Dynamic NAT/PAT</td>
+        <td><code>ip nat inside source list &lt;id&gt; pool &lt;name&gt; overload</code></td>
+      </tr>
+      <tr>
+        <td class="separator">Static NAT/PAT</td>
+        <td class="separator"><code>ip nat inside source static &lt;internal-ip&gt;&lt;external-ip&gt;</code></td>
+      </tr>
+
       <!-- Routing -->
       <tr>
         <th rowspan="2"><b>Router</b></th>
